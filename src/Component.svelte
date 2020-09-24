@@ -1,5 +1,5 @@
 <script>
-  import { Grid } from "ag-grid-community";
+  import { Grid } from "@ag-grid-community/core";
   import { onMount } from "svelte";
 
   export let columnDefs;
