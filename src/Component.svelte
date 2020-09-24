@@ -46,6 +46,14 @@
   }
 </style>
 
+<svelte:head>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-alpine.css" />
+</svelte:head>
 <div class="container">
   <div
     bind:this={ref}
