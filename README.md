@@ -5,7 +5,7 @@ A barebones wrapper around ag-grid.
 Example usage:
 ```svelte
 <script>
-  import AgGrid from "svelte-ag-grid";
+  import AgGrid from "@budibase/svelte-ag-grid";
 
   let data = [
     { make: "Toyota", model: "Celica", price: 35000 },
