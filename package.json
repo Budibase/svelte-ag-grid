@@ -1,6 +1,6 @@
 {
   "name": "@budibase/svelte-ag-grid",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
@@ -8,13 +8,12 @@
     "build": "rollup -c"
   },
   "devDependencies": {
+    "ag-grid-community": "^24.0.0",
     "@rollup/plugin-commonjs": "^15.1.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
-    "ag-grid-community": "^24.0.0",
     "rollup": "^2.0.0",
     "rollup-plugin-svelte": "^6.0.0",
-    "svelte": "^3.0.0",
-    "@ag-grid-community/all-modules": "^24.0.0"
+    "svelte": "^3.0.0"
   },
   "keywords": [
     "svelte"
