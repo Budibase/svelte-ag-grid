@@ -1,4 +1,5 @@
 <script>
+  const dispatch = createEventDispatcher();
   import { Grid } from "ag-grid-community";
   import { onMount } from "svelte";
 
@@ -20,6 +21,7 @@
 
   const onCellValueChanged = (e) => {
     data[e.rowIndex] = e.data;
+    dispatch("update", { row: e.rowIndex, data: e.data });
   };
 
   const onGridReady = () => {
