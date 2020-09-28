@@ -19,6 +19,11 @@
   let grid;
   let api;
 
+  const onSelectionChanged = (e) => {
+    const selectedRows = api.getSelectedRows();
+    dispatch("select", selectedRows);
+  };
+
   const onCellValueChanged = (e) => {
     data[e.rowIndex] = e.data;
     dispatch("update", { row: e.rowIndex, data: e.data });
@@ -41,6 +46,7 @@
       rowData: data,
       onGridReady,
       onCellValueChanged,
+      onSelectionChanged,
     });
   });
 
