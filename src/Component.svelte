@@ -1,4 +1,5 @@
 <script>
+  import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
   import { Grid } from "ag-grid-community";
   import { onMount } from "svelte";
