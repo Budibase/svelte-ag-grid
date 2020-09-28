@@ -6,13 +6,12 @@
   export let columnDefs;
   export let data;
   export let options = {
-    columnDefs,
     defaultColDef: {
       flex: 1,
       minWidth: 150,
       filter: true,
     },
-    rowData: data,
+    rowSelection: "multiple",
   };
 
   let ref;
@@ -35,7 +34,13 @@
   };
 
   onMount(() => {
-    grid = new Grid(ref, { ...options, onGridReady, onCellValueChanged });
+    grid = new Grid(ref, {
+      ...options,
+      columnDefs,
+      rowData: data,
+      onGridReady,
+      onCellValueChanged,
+    });
   });
 
   $: updateData(data);
