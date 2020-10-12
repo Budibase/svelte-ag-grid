@@ -6,6 +6,7 @@
 
   export let columnDefs;
   export let data;
+  export let theme = "alpine";
   export let options = {
     defaultColDef: {
       flex: 1,
@@ -66,7 +67,7 @@
     href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css" />
   <link
     rel="stylesheet"
-    href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-alpine.css" />
+    href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-{theme}.css" />
 </svelte:head>
 <div class="container">
   <div
