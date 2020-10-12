@@ -73,5 +73,5 @@
   <div
     bind:this={ref}
     style="height: 100%; width:100%"
-    class="ag-theme-alpine" />
+    class="ag-theme-{theme}" />
 </div>
