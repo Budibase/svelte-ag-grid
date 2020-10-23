@@ -1,8 +1,11 @@
 <script>
   import { createEventDispatcher } from "svelte";
-  const dispatch = createEventDispatcher();
   import { Grid } from "ag-grid-community";
   import { onMount } from "svelte";
+  import "ag-grid-community/dist/styles/ag-grid.css";
+  import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+
+  const dispatch = createEventDispatcher();
 
   export let columnDefs;
   export let data;
@@ -15,6 +18,7 @@
     },
     rowSelection: "multiple",
   };
+  export let loading
 
   let ref;
   let grid;
@@ -32,6 +36,7 @@
 
   const onGridReady = () => {
     api = grid.gridOptions.api;
+    if (loading) api.showLoadingOverlay();
   };
 
   const updateData = (data) => {
@@ -63,12 +68,11 @@
 </style>
 
 <svelte:head>
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css" />
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-{theme}.css" />
+  {#if theme !== "alpine"}
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-{theme}.css" />
+  {/if}
 </svelte:head>
 <div class="container">
   <div
