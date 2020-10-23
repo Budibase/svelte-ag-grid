@@ -37,6 +37,7 @@
   const updateData = (data) => {
     if (grid && api) {
       api.setRowData(data);
+      api.setColumnDefs(columnDefs);
     }
   };
 
