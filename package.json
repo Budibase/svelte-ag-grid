@@ -5,7 +5,8 @@
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "ag-grid-community": "^24.0.0"
