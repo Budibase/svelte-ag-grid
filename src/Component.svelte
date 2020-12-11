@@ -23,7 +23,7 @@
   let grid;
   let api;
 
-  const onSelectionChanged = (e) => {
+  const onSelectionChanged = () => {
     const selectedRows = api.getSelectedRows();
     dispatch("select", selectedRows);
   };
