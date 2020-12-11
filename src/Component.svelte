@@ -18,7 +18,7 @@
     },
     rowSelection: "multiple",
   };
-  export let loading
+  export let loading = false;
 
   let ref;
   let grid;
