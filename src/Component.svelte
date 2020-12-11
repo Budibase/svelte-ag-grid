@@ -1,7 +1,7 @@
 <script>
   import { createEventDispatcher } from "svelte";
   import { Grid } from "ag-grid-community";
-  import { onMount } from "svelte";
+  import { onDestroy, onMount } from "svelte";
   import "ag-grid-community/dist/styles/ag-grid.css";
   import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 
@@ -55,6 +55,12 @@
       onCellValueChanged,
       onSelectionChanged,
     });
+  });
+
+  onDestroy(() => {
+    if (grid) {
+      grid.destroy();
+    }
   });
 
   $: updateData(data);
