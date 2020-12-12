@@ -20,6 +20,7 @@
   };
   export let loading
 
+  let themeUrl = `https://unpkg.com/ag-grid-community/dist/styles/ag-theme-${theme}.css`;
   let ref;
   let grid;
   let api;
@@ -68,10 +69,10 @@
 </style>
 
 <svelte:head>
-  {#if theme !== "alpine"}
+  {#if theme !== "alpine" && !Object.values(document.styleSheets).some((styleSheet) => styleSheet.href === themeUrl)}
     <link
       rel="stylesheet"
-      href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-{theme}.css" />
+      href={themeUrl} />
   {/if}
 </svelte:head>
 <div class="container">
