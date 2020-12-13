@@ -1,12 +1,12 @@
 {
   "name": "@budibase/svelte-ag-grid",
-  "version": "0.0.16",
+  "version": "1.0.0",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "dependencies": {
     "ag-grid-community": "^24.0.0"
