@@ -15,6 +15,7 @@
       minWidth: 150,
       filter: true,
     },
+    suppressFieldDotNotation: true,
     rowSelection: "multiple",
   };
   export let loading = false;
