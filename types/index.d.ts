@@ -1,21 +1,16 @@
-import { SvelteComponent } from "svelte";
+import { SvelteComponentTyped } from "svelte";
+import { ColDef, GridOptions } from "ag-grid-community"
 
-/* TODO: Use when updated to Svelte ^3.31.0 with SvelteComponentTyped */
-/**
- * import { ColDef, GridOptions } from "ag-grid-community"
- *
- * interface AgGridProps {
- *  columnDefs: ColDef;
- *  data: any;
- *  theme?: string;
- *  options?: GridOptions;
- *  loading?: boolean;
- * }
- *
- * declare class AgGridComponent extends SvelteComponentTyped<AgGridProps> {}
-*/
+interface AgGridProps {
+  columnDefs: ColDef;
+  data: any;
+  theme?: string;
+  options?: GridOptions;
+  loading?: boolean;
+}
 
-declare class AgGridComponent extends SvelteComponent { }
+declare class AgGridComponent extends SvelteComponentTyped<AgGridProps> { }
+
 
 export default AgGridComponent;
 
