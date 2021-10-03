@@ -2,7 +2,7 @@ import { SvelteComponentTyped } from "svelte";
 import { ColDef, GridOptions } from "ag-grid-community"
 
 interface AgGridProps {
-  columnDefs: ColDef;
+  columnDefs: ColDef[];
   data: any;
   theme?: string;
   options?: GridOptions;
